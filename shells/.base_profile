@@ -13,28 +13,11 @@ fi
 mkdir -p $DOTFILES/secrets
 touch $DOTFILES/secrets/.envvar
 
-# Load Module envVars
-for f in $DOTFILES/modules/**/*.envvar $DOTFILES/modules/**/.envvar; do
-    [ -f "$f" ] || continue
-    source $f;
-done
-
- [ -e "$f" ] && source $f || continue
-
-for f in $DOTFILES/secrets*.envvar; do
-     [ -e "$f" ] && source $f || continue
-done
 
 PROCESS_SHELL=$(ps -cp "$$" -o command="")
 
 # Load base process files
-for f in $DOTFILES/modules/**/*.envvar $DOTFILES/modules/**/.envvar; do
-    [ -f "$f" ] || continue
-    source $f;
-done
-
-# Load base process files
-for f in $DOTFILES/modules/**/*.shrc $DOTFILES/modules/**/.shrc; do
+for f in $DOTFILES/modules/**/*.envvar $DOTFILES/modules/**/.envvar $DOTFILES/secrets/*.envvar $DOTFILES/modules/**/*.shrc $DOTFILES/modules/**/.shrc; do
     [ -f "$f" ] || continue
     source $f;
 done

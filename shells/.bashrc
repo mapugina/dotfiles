@@ -4,17 +4,20 @@ case $- in
       *) return;;
 esac
 
+# Find DOTFILES directory
+if [ -d "$HOME/dotfiles" ]; then
+   DOTFILES="$HOME/dotfiles"
+elif [ -d "$HOME/.dotfiles" ]; then
+   DOTFILES="$HOME/.dotfiles"
+else 
+    exit # exit if there is no dotfiles directory
+fi
+
 # Load base profile
 source $DOTFILES/shells/.base_profile
 
-# load module files
-for f in $DOTFILES/modules/**/*.bashrc $DOTFILES/modules/**/.bashrc; do
-    [ -f "$f" ] || continue
-    source $f;
-done
-
 # Load aliases
-for f in $DOTFILES/modules/**/*.aliases $DOTFILES/modules/**/.aliases; do
+for f in $DOTFILES/modules/**/*.bashrc $DOTFILES/modules/**/.bashrc $DOTFILES/modules/**/*.aliases $DOTFILES/modules/**/.aliases; do
     [ -f "$f" ] || continue
     source $f;
 done
