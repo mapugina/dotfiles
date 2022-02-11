@@ -11,5 +11,5 @@
 # source $DOTFILES_BASE/modules/nvm/nvm.shrc
 
 export PATH=$(echo "$PATH" | sed -e 's/:\/mnt[^:]*//g') # Remove bad windows paths
-plugins=(git node docker docker-compose ng npx npm vscode)
+plugins=(git node docker docker-compose ng npm vscode)
 source $ZSH/oh-my-zsh.sh
