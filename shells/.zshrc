@@ -16,3 +16,6 @@ for f in $DOTFILES/modules/**/*.zshrc $DOTFILES/modules/**/.zshrc $DOTFILES/modu
     [ -f "$f" ] || continue
     source $f;
 done
+
+# Finally load oh-my-zsh
+source $ZSH/oh-my-zsh.sh

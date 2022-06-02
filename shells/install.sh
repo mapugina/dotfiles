@@ -13,3 +13,7 @@ ln -s $DOTFILES_BASE/shells/.bash_logout $HOME/.bash_logout
 
 # Link zsh stuff
 ln -s $DOTFILES_BASE/shells/.zshrc $HOME/.zshrc
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm

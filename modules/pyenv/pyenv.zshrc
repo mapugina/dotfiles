@@ -6,6 +6,7 @@
 # enable shims by adding the following
 # to ~/.profile:
 if [ -f "$HOME/.pyenv" ]; then
+    plugins+=(python)
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init --path)"
