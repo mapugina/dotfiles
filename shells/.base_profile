@@ -18,7 +18,6 @@ PROCESS_SHELL=$(ps -cp "$$" -o command="")
 
 # Load base process files
 for f in $DOTFILES/modules/**/*.envvar $DOTFILES/modules/**/.envvar $DOTFILES/secrets/.envvar $DOTFILES/secrets/*.envvar $DOTFILES/modules/**/*.shrc $DOTFILES/modules/**/.shrc; do
-    echo $f
     [ -f "$f" ] || continue
     source $f;
 done
