@@ -18,5 +18,3 @@ elif [ "$IN_WSL" = true ]; then
 else
   ZSH_THEME="robbyrussell" # default to the default
 fi
-
-echo ZSH_THEME
