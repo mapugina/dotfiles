@@ -1,5 +1,7 @@
-# place this after nvm initialization!
+# load autocompletion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# place this after nvm initialization!
 export NODE_OPTIONS=--max_old_space_size=4096
 
 autoload -U add-zsh-hook
