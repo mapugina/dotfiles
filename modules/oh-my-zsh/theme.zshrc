@@ -13,8 +13,10 @@
 # Use a more verbose theme if connected by ssh
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   ZSH_THEME="kafeitu"
-elif cat /proc/version | grep -q '[Mm]icrosoft'; then
+elif [ "$IN_WSL" = true ]; then
   ZSH_THEME="kafeitu"
 else
   ZSH_THEME="robbyrussell" # default to the default
 fi
+
+echo ZSH_THEME
