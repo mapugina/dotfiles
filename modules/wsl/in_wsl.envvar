@@ -1,6 +1,7 @@
 # Check if this is microsoft linux
-if cat /proc/version | grep -q '[Mm]icrosoft'; then
-    IN_WSL=true
-else
-    IN_WSL=false
+IN_WSL=false # Default to false
+if [ -f "/proc/version" ]; then
+    if cat /proc/version | grep -q '[Mm]icrosoft'; then
+        IN_WSL=true
+    fi
 fi
