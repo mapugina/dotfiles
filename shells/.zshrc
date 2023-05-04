@@ -1,3 +1,5 @@
+# set -x	
+
 # Find DOTFILES directory
 if [ -d "$HOME/dotfiles" ]; then
    DOTFILES="$HOME/dotfiles"
