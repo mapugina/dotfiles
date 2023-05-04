@@ -1,2 +1,2 @@
 # bun completions
-[ -s "/Users/mpugina/.bun/_bun" ] && source "/Users/mpugina/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
